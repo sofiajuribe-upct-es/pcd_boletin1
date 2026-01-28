@@ -1,0 +1,11 @@
+# Entorno virtual
+Scripts/
+Lib/
+pyvenv.cfg
+
+# Cachés de Python
+__pycache__/
+.pytest_cache/
+
+# Archivos que no deben versionarse
+src/ejercicio_1_pytest.py

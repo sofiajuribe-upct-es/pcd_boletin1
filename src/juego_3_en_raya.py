@@ -97,7 +97,6 @@ def test_no_ganador():
 
     assert False == jugada_ganadora(movimientos_jugador) 
 
- 
 
 def test_ganador(): 
 

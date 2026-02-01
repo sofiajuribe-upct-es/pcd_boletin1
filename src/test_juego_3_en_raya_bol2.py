@@ -1,7 +1,7 @@
 
 import pytest
 #from src.juego_3_en_raya_bol2 import test_ganador
-from juego_3_en_raya_bol2 import mostrar_tablero, movimiento_valido, jugada_ganadora
+from src.juego_3_en_raya_bol2 import mostrar_tablero, movimiento_valido, jugada_ganadora
 
 
 #Los .fixture siempre se ponen en el archivo de test

@@ -1,6 +1,7 @@
 
 import pytest
-from juego_3_en_raya_bol2 import mostrar_tablero, movimiento_valido
+#from src.juego_3_en_raya_bol2 import test_ganador
+from juego_3_en_raya_bol2 import mostrar_tablero, movimiento_valido, jugada_ganadora
 
 
 #Los .fixture siempre se ponen en el archivo de test
@@ -54,4 +55,18 @@ def test_movimiento_incorrecto(tablero_dimension, movimientos_ocupados):
     x = 2
     y = 3
     assert not movimiento_valido(tablero_dimension, x, y, movimientos_ocupados)
- 
+
+#PASO 3
+@pytest.fixture
+def movimientos_no_ganador():
+    return {2: [2, 3]}
+
+@pytest.fixture
+def movimientos_ganador():
+    return {2: [1, 2, 3]}
+
+def test_no_ganador(movimientos_no_ganador):
+    assert not jugada_ganadora(movimientos_no_ganador)
+
+def test_ganador(movimientos_ganador):
+    assert jugada_ganadora(movimientos_ganador)
